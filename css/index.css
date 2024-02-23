@@ -1,0 +1,312 @@
+@import url('common.css');
+body{
+    min-height: 100vh;
+    background-color:var(--body-color);
+    transition: var(--tran-05);
+}
+::selection{
+    background-color: var(--primary-color);
+    color: #fff;
+}
+.header-bar {
+    padding: 0rem 3rem 0rem 1.75rem;
+    background-color: var(--primary-color);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    z-index: 1001;
+    display: flex;
+    height: 5rem;
+    margin-bottom: 5rem;
+}
+/* ===== Sidebar ===== */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25rem;
+    padding: 2rem 1.4rem;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+    margin-top: 3.5rem;
+}
+.menu-button {
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left: 1.3rem;
+    margin-top: 0.75rem;
+}
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+    height: 5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+/* .sidebar header .image, */
+.sidebar .icon{
+    min-width: 6rem;
+    border-radius: 0.6rem;
+}
+.sidebar .icon{
+    min-width: 6rem;
+    border-radius: 0.6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+.sidebar .text,
+.sidebar .icon{
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+.sidebar .text{
+    font-size: 1.7rem;
+    font-weight: 500;
+    white-space: nowrap; 
+    opacity: 1;
+}
+.sidebar.close .text{
+    opacity: 0;
+}
+.sidebar.close .nav-text{
+    min-width: none;
+}
+/* =========================== */
+.header-bar .image-text{
+    display: flex;
+    align-items: center;
+    margin-left: 3.2rem;
+}
+.header-bar .logo-text{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    margin-left: 1rem;
+}
+.header-bar .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header-bar .image img{
+    width: 6rem;
+    margin-right: 0.2rem;
+    border-radius: 0.6rem;
+}
+.sidebar li a{
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 0.6rem;
+    text-decoration: none;
+    transition: var(--tran-03);
+}
+.sidebar li a:hover{
+    background-color: var(--primary-color);
+}
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--sidebar-color);
+}
+.home {
+    position: absolute;
+    top: 5.2rem;    
+    left: 25.2rem;
+    height: 100vh;
+    width: calc(100% - 25.2rem);
+    background-color:  var(--body-color);
+    transition: var(--tran-05);
+    /* overflow: hidden; */
+   
+}
+.home .text{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+    /* padding: 0 3.5rem; */
+}
+.sidebar.close ~ .home{
+    left:9rem;
+    height: 100vh;
+    width: calc(100% - 9rem);
+}
+input,textarea,select,.select-box
+{
+    padding:0 1rem;
+} 
+.type{
+    font-size:1.7rem; color:whitesmoke; font-weight:bolder; margin-left:12rem;
+}
+
+/* Styles for dropdowns */
+.nav-link {
+    position: relative;
+}
+.nav-link:hover .dropdown-menu {
+    display: block;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--sidebar-color);
+    border-radius: 0.6rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 200px;
+}
+.dropdown-menu li {
+    padding: 8px 15px;
+}
+.dropdown-menu a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: block;
+}
+.dropdown-menu li:hover {
+    color: white;
+    background-color: var(--primary-color); 
+}
+.nav-link .dropdown-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--text-color);
+    display: none; 
+}
+.sidebar.close  .dropdown-menu {
+    min-width: none;
+    width: none;
+}
+.sidebar.close .dropdown-icon {
+    display: none; 
+}
+.sidebar:not(.close) .nav-link:hover .dropdown-icon {
+    display: block; 
+}
+.sidebar.close {
+    width: 8.8rem;
+}
+/* cards container */
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    width: 40rem;
+    height: 30rem;
+    margin: 2rem  2rem 2rem 2rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.45rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff; 
+    background: linear-gradient(to right, #695CFE, #a09bc8); 
+    border-radius: 1rem; 
+}
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+.icon2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+.img2{
+    height: 10rem;
+    padding: 2rem 0 0 0;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+sup{
+    color:red;
+    font-size:1.5rem;
+  }
+/* @media(max-width:998px){
+    html{
+        font-size: 55%; 
+    }
+    .home{
+        position: absolute;
+        top: 0;
+        left: 22rem;
+        height: 100vh;
+        width: calc(100% - 21rem);
+        background-color: var(--body-color);
+        transition: var(--tran-05);
+    }
+    .home .text{
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--text-color);
+        padding: 0 3.5rem;
+    }
+     .bottom-content{
+        margin-top: 18rem;
+    } 
+    .type{
+        font-size:1.5rem;margin-left:9rem
+    }
+}
+@media(max-width:768px){
+    html{
+        font-size: 45%;
+    }
+    .home{
+        position: absolute;
+        top: 0;
+        left: 22rem;
+        height: 100vh;
+        width: calc(100% - 21rem);
+        background-color: var(--body-color);
+        transition: var(--tran-05);
+    }
+    .home .text{
+        position: relative;
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: var(--text-color);
+        padding: 0 3.5rem;
+    }
+    .header-bar .logo-text{
+        font-size: 1.4rem;
+        margin-left: 0.7rem;
+    }
+    .type{
+        font-size:1.5rem; margin-left:5rem
+    }
+    /* .bottom-content{
+        margin-top: 29rem;
+    } 
+}  */
+
+
+
+
+
+
+

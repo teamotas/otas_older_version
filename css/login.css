@@ -1,0 +1,80 @@
+@import url('common.css');
+.loginform {
+  width: 50rem;
+  padding: 3rem 2rem;
+  background: var(--sidebar-color);
+  transition: 2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  box-shadow: 0rem 0rem 10rem 3rem #ccc;
+}
+h2 {
+  text-align: center;
+  text-transform: none;
+  color: var(--primary-color);
+  padding-bottom: 0.5rem;
+  font-size: 2.45rem;
+}
+.label {
+  text-transform: uppercase;
+  text-decoration: wavy;
+  color: rgb(93, 127, 214);
+  font-family: "Times New Roman", Times, serif;
+  font-size: medium;
+}
+.input{
+  width: 100%;
+  height: 3rem;
+}
+.error-input{
+  margin-bottom: 1.5rem;
+}
+.success input {
+  border-color: #09c372;
+}
+.error input {
+  border-color: #ff3860;
+}
+.error {
+  color: #ff3860;
+  font-size: 1.3rem
+}
+.loginbtn {
+  width: 40%;
+  height: 2.8rem;
+  background: var(--primary-color);
+  color: aliceblue;
+  margin-bottom:1rem  ;
+  font-size: 1.6rem;
+  margin-left: 12.5rem;
+}
+.links>a{
+  margin-left: 17rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  font-size: 1.25rem;
+}
+.loginbtn:hover{
+  background:var(--primary-color-light);
+}
+a:hover{
+  text-decoration: underline;
+}
+.showpswd{
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+}
+@media(max-width:998px){
+  html{
+    font-size: 55%;
+  }
+}
+@media(max-width:768px){
+  html{
+    font-size: 45%;
+  }
+}  

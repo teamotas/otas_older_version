@@ -1,0 +1,201 @@
+@import url('common.css');
+/* ------choose----Client------ */
+.choose-client{
+  width: 65rem;
+  padding: 3rem 2rem;
+  background: var(--sidebar-color);
+  transition: 2s;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* z-index: 3; */
+  box-shadow: 0rem 0rem 1rem 0.3rem #ccc;
+  margin-top: 8rem;
+}
+.choose-client input[type="text"],[type="password"],[type="email"],[type="tel"],[type="date"],[type=file]{
+  width: 100%;
+  margin-bottom: 1rem;
+  padding:0 0 0 1rem ;
+  height: 2.5rem;
+  border: 0.2rem solid var(--body-color);
+}
+.choose-client select {
+  width: 100%;
+  margin: 0.4rem 0 1rem 0;
+  padding:0 0 0 1rem ;
+  height: 2.5rem;
+  border: 0.2rem solid var(--body-color);
+}
+/* ------choose----Client end------ */
+/* ------user------ */
+.user{
+  width: 60rem;
+  padding: 3rem 2rem;
+  background: var(--sidebar-color);
+  transition: 2s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0rem 0rem 1rem 0.3rem #ccc;
+  margin-top: 8rem;
+}
+.user input[type="text"],[type="password"],[type="email"],[type="tel"],[type="date"],[type=file]{
+  width: 100%;
+  margin-bottom: 1rem;
+  height: 2.5rem;
+  border: 0.2rem solid var(--body-color);
+  padding:0 0 0 1rem ;
+}
+.user .selection{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.selection.select {
+  width:22rem;
+  /* margin: 1.4rem 0; */
+  height: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border: 0.2rem solid var(--body-color);
+  padding:0 0 0 1rem ;
+}
+.Gender{
+  margin:1rem 0 1.7rem 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+}
+.Gender input{
+  margin-left: 2rem;
+  display: flex;
+  align-items: center;
+}
+/* tooltip pswd */
+.info-icon {
+  display: inline-flex;
+}
+.tooltip {
+  display: none;
+  position: absolute;
+  top:71%;
+  left:23%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tooltip ul{
+  margin-left:1.8rem;
+}
+.tooltip li{
+  padding:0 1rem 0 0;
+  color:red;
+  font-size:1.3rem;
+}
+.info-icon:hover .tooltip {
+  display: block;
+}
+/* tooltip pswd end*/
+/* ------user end------ */
+
+/* ------Client------ */
+.client{
+  width: 70rem;
+  padding: 3rem 2rem;
+  background:var(--sidebar-color);
+  transition: 2s;
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  box-shadow: 0rem 0rem 1rem 0.3rem #ccc;
+}
+.client input[type="text"],select {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  padding:0 0 0 1rem ;
+  height: 3rem;
+  border: 0.2rem solid var(--body-color);
+}
+/* ------Client end------ */
+h2{
+  text-align: center;
+  color:var(--primary-color);
+  padding-bottom: 1rem;
+  font-size: 2.45rem;
+}
+.label{
+  text-decoration: wavy;
+  color:black;
+  font-size: 1.7rem;
+  margin: 0 0.5rem 0 0;
+}
+.selectfont{
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  width: 50%;
+  height: 2.8rem;
+  background: var(--primary-color);
+  color: white;
+  text-align: center;
+  align-items: center;
+  margin: 1.5rem auto 0; 
+  display: block;
+}
+.btn:hover{
+  background:var(--primary-color-light);
+}
+.showpswd{
+  display: flex;
+  align-items: center;
+}
+
+.required-text{
+  display:inline-flex;
+  color:red; 
+  font-size:1.4rem;
+}
+/* image */
+.preview-image{
+  width: 10rem;
+  height: 10rem;
+}
+/* message */
+.error-message {
+  color: red;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  display: none; 
+}
+.error-message-side {
+  float: right;
+  color: red;
+  font-size: 1.2rem;
+  margin-right: 3.5rem;
+  display: none; 
+}
+
+
+/* media Query */
+/* @media(max-width:998px){
+  html{
+    font-size: 55%; 
+  }
+  .preview-image{
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media(max-width:600px){
+  html{
+    font-size: 35%;
+  }
+}  */

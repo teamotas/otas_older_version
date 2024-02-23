@@ -1,0 +1,15 @@
+{
+    "name": "hp/otas",
+    
+    "autoload": {
+        "psr-4": {
+            "Nowakowskir\\JWT\\": "vendor/nowakowskir/php-jwt/src/"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "^0.4.4",
+        "firebase/php-jwt": "^6.9",
+        "nowakowskir/php-jwt": "^2.1",
+        "phpoffice/phpspreadsheet": "^1.29"
+    }
+}

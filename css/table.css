@@ -1,0 +1,131 @@
+table{
+    width:fit-content;
+    column-rule-width: 0rem;
+    border-collapse:collapse;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    width:100%; 
+    margin:0 1.5rem 0 0;
+}
+.tr{
+    background-color:#fff; 
+    width:fit-content; 
+    height:min-content;
+}
+.tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+.thtr{
+    background-color:#4d79ff;  
+    width:2rem; 
+    font-size:3rem;  
+    font-weight:900; 
+    color:#fff;
+}
+.thead{
+    color:black;
+    background-color: #99b3ff;
+}
+/* -----------------project---------------- */
+.days-text {
+    color: blue; 
+}
+.thead2{
+    color:black; 
+    background-color: #95a3d0;
+}
+.thstyle{
+    font-size:1.2rem; 
+    font-weight:800; 
+    width:fit-content; 
+    padding:0 1rem; 
+}
+.tdstyle{
+    font-size:1.2rem; 
+    color: black; 
+    padding:0 1rem;
+}
+/* -----------------project end---------------- */
+
+/* ------------------clients----------------- */
+.thclientstyle{
+    font-size:2rem; 
+    height:2rem; 
+    font-weight:800; 
+    width:fit-content; 
+    padding:0 0.5rem;
+}
+.tdclientstyle{
+    font-size:1.8rem;
+    color: black; 
+    height:2rem; 
+    padding:0 1rem;
+}
+/* ------------------clients end----------------- */
+/* ------------------employees----------------- */
+.thuserdata{
+    font-size:1.5rem; 
+    font-weight:800; 
+    height:2rem; 
+    padding:0 0.5rem;
+}
+.tduserdata{
+   padding:0 0.8rem;
+   font-size:1.3rem;
+}
+.tduserphoto{
+    padding-left:0rem; 
+    margin-bottom:0;
+}
+.tduserimg{
+   padding-left:0rem; 
+   width:5rem; 
+   height:4rem;
+}
+/* ------------------employees end----------------- */
+
+/* ------------------buttons----------------- */
+.updatebtn{
+    background-color: rgb(71, 182, 192);
+    color: whitesmoke;
+    width:100%;
+    max-width:100vw;
+}
+.pymntbtn{
+    height: fit-content;
+    background-color: rgb(104 192 71);
+    color: whitesmoke;
+    width:100%;
+    max-width:100vw;
+}
+.deletebtn{
+    background-color: rgb(226, 19, 15);
+    color: whitesmoke;
+    width:100%;
+    max-width:100vw;
+}
+.exclbtngen{
+    background-color: rgb(226, 19, 15); 
+    color: whitesmoke; 
+    max-height:max-content; 
+    height:3rem;
+}
+/* ------------------buttons end----------------- */
+.tdxl{
+    text-align: center; 
+    color:black; 
+    background-color: #99b3ff;
+}
+.no_data{
+    margin-top:25rem; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center;
+    font-size:medium;
+}
+.even{
+    background-color: #95a3d0;
+}
+.odd{
+    background-color: #99b3ff;
+}

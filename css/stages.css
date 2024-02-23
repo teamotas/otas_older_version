@@ -1,0 +1,36 @@
+.custom-dropdown {
+    position: relative;
+    width: 15rem;
+    border:none; 
+}
+
+.selected-items {
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    max-height: 3.5rem;
+    overflow: auto; 
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 150px; /* Set a maximum height for the dropdown content */
+    overflow-y: auto; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-content label:hover {
+    background-color: #f0f0f0;
+}
