@@ -1,5 +1,5 @@
 <?php
-    include 'C:\xampp\htdocs\Otas\connection.php';
+    include 'connection.php';
     $country_id =   $_POST['country_data'];
 
     $state = "SELECT * FROM state_uts WHERE country_id = $country_id order by name";

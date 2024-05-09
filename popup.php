@@ -25,12 +25,12 @@
                 }
             }
             function download(){
-                location.replace("generate_excel_employee.php?AdminId=<?php echo $adminId; ?>");
+                location.replace("generate-excel-employee.php?AdminId=<?php echo $adminId; ?>");
             }
             function closePopup() {
                 var popup = document.getElementById('popup');
                 popup.style.display = 'none';
-                location.replace('employee_data.php');
+                location.replace('employee-data.php');
             }
         </script>
     </head>

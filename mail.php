@@ -48,7 +48,7 @@
         }
     }
     else{
-        header("location:login_user.php");
+        header("location:login-user.php");
     }
     // Create a new PHPMailer instance
     $mail = new PHPMailer(true);
@@ -87,7 +87,7 @@
         echo"
         <script>
             alert('$mail->ErrorInfo');
-            location.replace('forgot_password.php');
+            location.replace('forgot-password.php');
         </script>";
     }
 

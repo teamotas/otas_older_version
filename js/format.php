@@ -51,6 +51,15 @@ function setFormattedDateCellValue($sheet, $cell, $dateValue) {
     $sheet->setCellValue($cell, $formattedDate);
 }
 
+function setFormattedDateValue( $dateValue) {
+    if ($dateValue !== '0000-00-00') {
+        $formattedDate = date('d.m.Y', strtotime($dateValue));
+    } else {
+        $formattedDate = '';
+    }
+   return ($formattedDate);
+}
+
 function formatDate($date) {
     if (empty($date) || $date === "0000-00-00") {
         return "Not Declared"; 

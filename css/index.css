@@ -1,15 +1,12 @@
-@import url('common.css');
+@import url('all-common.css');
 body{
     min-height: 100vh;
     background-color:var(--body-color);
     transition: var(--tran-05);
-}
-::selection{
-    background-color: var(--primary-color);
-    color: #fff;
+    font-family: Arial, sans-serif; 
 }
 .header-bar {
-    padding: 0rem 3rem 0rem 1.75rem;
+    padding: 0 3rem 0 1.75rem;
     background-color: var(--primary-color);
     color: white;
     position: fixed;
@@ -20,64 +17,6 @@ body{
     display: flex;
     height: 5rem;
     margin-bottom: 5rem;
-}
-/* ===== Sidebar ===== */
-.sidebar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 25rem;
-    padding: 2rem 1.4rem;
-    background: var(--sidebar-color);
-    transition: var(--tran-05);
-    z-index: 100;  
-    margin-top: 3.5rem;
-}
-.menu-button {
-    font-size: 3rem;
-    cursor: pointer;
-    margin-left: 1.3rem;
-    margin-top: 0.75rem;
-}
-/* ===== Reusable code - Here ===== */
-.sidebar li{
-    height: 5rem;
-    list-style: none;
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-}
-/* .sidebar header .image, */
-.sidebar .icon{
-    min-width: 6rem;
-    border-radius: 0.6rem;
-}
-.sidebar .icon{
-    min-width: 6rem;
-    border-radius: 0.6rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2rem;
-}
-.sidebar .text,
-.sidebar .icon{
-    color: var(--text-color);
-    transition: var(--tran-03);
-}
-.sidebar .text{
-    font-size: 1.7rem;
-    font-weight: 500;
-    white-space: nowrap; 
-    opacity: 1;
-}
-.sidebar.close .text{
-    opacity: 0;
-}
-.sidebar.close .nav-text{
-    min-width: none;
 }
 /* =========================== */
 .header-bar .image-text{
@@ -101,6 +40,58 @@ body{
     margin-right: 0.2rem;
     border-radius: 0.6rem;
 }
+/* ===== Sidebar ===== */
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 25rem;
+    padding: 2rem 1.4rem;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 100;  
+    margin-top: 3.5rem;
+}
+.menu-button {
+    font-size: 3rem;
+    cursor: pointer;
+    margin-left:0.75rem 0 0 1.3rem;
+}
+/* ===== Reusable code - Here ===== */
+.sidebar li{
+    height: 5rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+/* .sidebar header .image, */
+.sidebar .icon{
+    min-width: 6rem;
+    border-radius: 0.6rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+.sidebar .text{
+    font-size: 1.7rem;
+    font-weight: 500;
+    white-space: nowrap; 
+    opacity: 1;
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+.sidebar.close .text{
+    opacity: 0;
+}
+.sidebar.close .nav-text{
+    min-width: none;
+}
 .sidebar li a{
     list-style: none;
     height: 100%;
@@ -120,43 +111,16 @@ body{
 .sidebar li a:hover .text{
     color: var(--sidebar-color);
 }
-.home {
-    position: absolute;
-    top: 5.2rem;    
-    left: 25.2rem;
-    height: 100vh;
-    width: calc(100% - 25.2rem);
-    background-color:  var(--body-color);
-    transition: var(--tran-05);
-    /* overflow: hidden; */
-   
-}
-.home .text{
-    position: relative;
-    font-size: 1.8rem;
-    font-weight: 500;
-    color: var(--text-color);
-    /* padding: 0 3.5rem; */
-}
-.sidebar.close ~ .home{
-    left:9rem;
-    height: 100vh;
-    width: calc(100% - 9rem);
-}
-input,textarea,select,.select-box
-{
-    padding:0 1rem;
-} 
-.type{
+.usertype{
     font-size:1.7rem; color:whitesmoke; font-weight:bolder; margin-left:12rem;
 }
-
 /* Styles for dropdowns */
 .nav-link {
     position: relative;
 }
 .nav-link:hover .dropdown-menu {
     display: block;
+    color:#fff;
 }
 .dropdown-menu {
     display: none;
@@ -177,6 +141,9 @@ input,textarea,select,.select-box
     text-decoration: none;
     font-size: 1.4rem;
     display: block;
+}
+.dropdown-menu a:hover{
+    color: white;
 }
 .dropdown-menu li:hover {
     color: white;
@@ -204,15 +171,35 @@ input,textarea,select,.select-box
 .sidebar.close {
     width: 8.8rem;
 }
+/* home */
+.home {
+    position: absolute;
+    top: 5.2rem;    
+    left: 25.2rem;
+    height: 100vh;
+    width: calc(100% - 25.2rem);
+    background-color:  var(--body-color);
+    transition: var(--tran-05); 
+}
+.home .text{
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.sidebar.close ~ .home{
+    left:9rem;
+    height: 100vh;
+    width: calc(100% - 9rem);
+}
 /* cards container */
-
 .card-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .card {
-    width: 40rem;
+    width: 35rem;
     height: 30rem;
     margin: 2rem  2rem 2rem 2rem;
     padding: 2rem;
@@ -231,10 +218,6 @@ input,textarea,select,.select-box
     transform: scale(1.05);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
 }
-.icon2 {
-    font-size: 5rem;
-    margin-bottom: 1rem;
-}
 .img2{
     height: 10rem;
     padding: 2rem 0 0 0;
@@ -244,69 +227,4 @@ input,textarea,select,.select-box
 sup{
     color:red;
     font-size:1.5rem;
-  }
-/* @media(max-width:998px){
-    html{
-        font-size: 55%; 
-    }
-    .home{
-        position: absolute;
-        top: 0;
-        left: 22rem;
-        height: 100vh;
-        width: calc(100% - 21rem);
-        background-color: var(--body-color);
-        transition: var(--tran-05);
-    }
-    .home .text{
-        position: relative;
-        font-size: 1.8rem;
-        font-weight: 500;
-        color: var(--text-color);
-        padding: 0 3.5rem;
-    }
-     .bottom-content{
-        margin-top: 18rem;
-    } 
-    .type{
-        font-size:1.5rem;margin-left:9rem
-    }
 }
-@media(max-width:768px){
-    html{
-        font-size: 45%;
-    }
-    .home{
-        position: absolute;
-        top: 0;
-        left: 22rem;
-        height: 100vh;
-        width: calc(100% - 21rem);
-        background-color: var(--body-color);
-        transition: var(--tran-05);
-    }
-    .home .text{
-        position: relative;
-        font-size: 1.8rem;
-        font-weight: 500;
-        color: var(--text-color);
-        padding: 0 3.5rem;
-    }
-    .header-bar .logo-text{
-        font-size: 1.4rem;
-        margin-left: 0.7rem;
-    }
-    .type{
-        font-size:1.5rem; margin-left:5rem
-    }
-    /* .bottom-content{
-        margin-top: 29rem;
-    } 
-}  */
-
-
-
-
-
-
-

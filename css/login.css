@@ -1,4 +1,5 @@
-@import url('common.css');
+@import url('all-common.css');
+/* login */
 .loginform {
   width: 50rem;
   padding: 3rem 2rem;
@@ -9,7 +10,9 @@
   left: 50%;
   z-index: 3;
   transform: translate(-50%, -50%);
-  box-shadow: 0rem 0rem 10rem 3rem #ccc;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h2 {
   text-align: center;
@@ -28,6 +31,13 @@ h2 {
 .input{
   width: 100%;
   height: 3rem;
+  padding: 0 1rem;
+}
+.error-message {
+  color: red;
+  font-size: 1.35rem;
+  margin:0.5rem 0 0 0.5rem;
+  display: none; 
 }
 .error-input{
   margin-bottom: 1.5rem;
@@ -35,30 +45,27 @@ h2 {
 .success input {
   border-color: #09c372;
 }
-.error input {
-  border-color: #ff3860;
-}
 .error {
   color: #ff3860;
-  font-size: 1.3rem
+  font-size: 1.3rem;
 }
 .loginbtn {
   width: 40%;
   height: 2.8rem;
   background: var(--primary-color);
   color: aliceblue;
-  margin-bottom:1rem  ;
+  margin:1.5rem 0.5rem 0 0.4rem;
   font-size: 1.6rem;
   margin-left: 12.5rem;
+}
+.loginbtn:hover{
+  background:var(--primary-color-light);
 }
 .links>a{
   margin-left: 17rem;
   margin-top: 1rem;
   text-decoration: none;
   font-size: 1.25rem;
-}
-.loginbtn:hover{
-  background:var(--primary-color-light);
 }
 a:hover{
   text-decoration: underline;
@@ -68,13 +75,3 @@ a:hover{
   align-items: center;
   font-size: 1.4rem;
 }
-@media(max-width:998px){
-  html{
-    font-size: 55%;
-  }
-}
-@media(max-width:768px){
-  html{
-    font-size: 45%;
-  }
-}  

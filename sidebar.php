@@ -156,7 +156,7 @@
             <div class="image-text"> 
                 <span class="image"><img src="photos\EdCIL_logo_svg.svg.png" alt="EDCIL"></span> 
                 <div class="text logo-text"><span class="name">EDCIL | OTAS</span></div>
-                    <div ><p class="type"><?php  if($adminName ){echo $adminName ;} else {echo $userName ;}?></p></div>
+                    <div ><p class="usertype"><?php  if($adminName ){echo $adminName ;} else {echo $userName ;}?></p></div>
             </div> 
         </header>
         <nav class="sidebar open">
@@ -169,60 +169,77 @@
                 </li> 
                 <?php if($adminType==='Admin'){?>
                 <li class="nav-link">
-                    <a href="" class=''>
+                    <a href="#" class=''>
                         <i class='bx bx-user icon'></i>
                         <span class="text nav-text">Users</span>
                         <i class='hide bx bxs-chevron-down dropdown-icon'></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a href="create_user.php">Create User</a></li>
-                        <li><a href="employee_data.php" >Employee Data</a></li>
+                        <li><a href="create-user.php">Create User</a></li>
+                        <li><a href="employee-data.php" >Employee Data</a></li>
                     </ul>
                 </li>
                 <?php }?>
                 
                 <li class="nav-link">
-                    <a href="">
+                    <a href="#">
                         <i class='bx bx-briefcase icon' ></i>
                         <span class="text nav-text">Clients</span>
                         <i class='bx bxs-chevron-down dropdown-icon'></i>
                     </a>
                     <ul class="dropdown-menu">
                         <?php //if($adminType==='Admin'){?>
-                            <li><a href="create_client.php">Create Client</a></li>
+                            <li><a href="create-client.php">Create Client</a></li>
                         <?php //}?>
                         <li><a href="clients.php">Client Data</a></li>
                     </ul>
                 </li>
                 
                 <li class="nav-link">
-                    <a href="">
+                    <a href="#">
                         <i class='bx bx-task icon' ></i>
                         <span class="text nav-text">Projects</span>
                         <i class='bx bxs-chevron-down dropdown-icon'></i>
                     </a>
                     <ul class="dropdown-menu">
                     <?php if($userType==='User'){?>
-                        <li><a href="choose_client.php" >Create Project</a></li>
+                        <li><a href="choose-client.php" >Create Project</a></li>
                         <?php }?>
-                        <li><a href="project_data.php">All Projects</a></li>
+                        <li><a href="project-data.php">All Projects</a></li>
                     </ul>
                 </li>
 
                 <li class="nav-link">
-                    <a href="">
+                    <a href="#">
                         <i class='bx bx-terminal icon' ></i>
                         <span class="text nav-text">TCS</span>
                         <i class='bx bxs-chevron-down dropdown-icon'></i>
                     </a>
                     <ul class="dropdown-menu">
                     <?php if($userType==='User'){?>
-                        <li ><a href="choose_client_tcs.php">Create Project</a></li>
+                        <li ><a href="choose-client-tcs.php">Create Project</a></li>
                         <?php }?>
-                        <li><a href="project_data_tcs.php">All Projects</a></li>
+                        <li><a href="project-data-tcs.php">All Projects</a></li>
                     </ul>
                 </li>
             </ul>
+
+            <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-task icon' ></i>
+                        <span class="text nav-text">QPR Generator</span>
+                        <i class='bx bxs-chevron-down dropdown-icon'></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                    <?php //if($userType===''){?>
+                        <li><a href="report-generate.php">Generate Quarterly Report</a></li>
+                        <? //}?>
+                        <!-- <li><a href="#">PROJECTS IN PROGRESS Report Generate</a></li>
+                        <li><a href="#">Fully Completed Report Generate</a></li>
+                        <li><a href="#">Physically Completed Financially not Completed Report Generate</a></li> -->
+                        
+                    </ul>
+                </li>
 
             <div class="bottom-content" >
                 <li class="">
@@ -234,7 +251,7 @@
             </div>
         </nav>
         <section class="home"  > 
-          
+    
         </section>
         <script defer src="js/sidebar.js"></script>
     </body>

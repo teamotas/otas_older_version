@@ -10,6 +10,9 @@
         "cboden/ratchet": "^0.4.4",
         "firebase/php-jwt": "^6.9",
         "nowakowskir/php-jwt": "^2.1",
-        "phpoffice/phpspreadsheet": "^1.29"
+        "phpoffice/phpspreadsheet": "^1.29",
+        "tecnickcom/tcpdf": "^6.7",
+        "mpdf/mpdf": "^8.2",
+        "phpoffice/phpword": "^1.2"
     }
 }

@@ -1,42 +1,219 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+@import url('all-common.css');
+.container{
+  max-width: 800px; /* Adjust the maximum width as needed */
+  margin: 20px auto; /* Center the container horizontally */
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a shadow effect */
 }
-html{
-  font-size: 62.5%;
+#heading,h2{ 
+  text-align: center;
+  color:var(--primary-color);
+  padding-bottom: 1rem;
+  font-size: 2.45rem;
 }
-html,body {
-  height: 100%;
+.project-details {
+  margin-top: 20px;
 }
-:root{
-  /* ===== Colors ===== */
-  --body-color: #d2dbf4;
-  --sidebar-color: #FFF;
-  --primary-color: #695CFE;
-  --primary-color-light: #a09bc8;
-  --toggle-color: #DDD;
-  --text-color: #707070;
-  /* ====== Transition ====== */
-  --tran-03: all 0.2s ease;
-  --tran-03: all 0.3s ease;
-  --tran-04: all 0.3s ease;
-  --tran-05: all 0.3s ease;
+.inputbox {
+  margin-bottom: 15px;
 }
-body.dark{
-  --body-color: #18191a;
-  --sidebar-color: #242526;
-  --primary-color: #3a3b3c;
-  --primary-color-light: #3a3b3c;
-  --toggle-color: #fff;
-  --text-color: #ccc;
+.inputbox span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 13px;
 }
-.centre{
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+.button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #45a049;
+}
+.details sup {
+  color: red;
+}
+.allfields {
+  display: block;
+  margin-top: 20px;
+}
+.mmddyy {
+  font-size: 12px;
+  font-style: italic;
+}
+/* Style for the dropdown chevron icon */
+.dropdown-select {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 40px;
+  font-size: 1.4rem;
+  color: gray;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+/* Style for the select-dropdown */
+.select-dropdown {
+  border: 1px solid #ccc;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  width: 30rem; /* Increased width */
+  position: absolute;
+  left: 20%; /* Adjusted left position */
+  z-index: 1;
+  opacity: 0;
+  transform-origin: top center;
+  font-size: 1.5rem;
+  transform: scaleY(0);
+  transition: opacity 0.2s, transform 0.2s ease;
+}
+/* Style for the select-header */
+.select-header {
+  padding: 0.5rem;
+  margin: 0.5rem 0 0 0.5rem;
   display: flex;
   align-items: center;
-  color:rgb(93, 127, 214) ;
-  margin-top: 0.7rem;
-  font-size :1.5rem;
+}
+/* Style for the "Select All" checkbox label */
+.select-header label {
+  cursor: pointer;
+}
+/* Style for the select-options container */
+.select-options {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+/* Style individual checkboxes and labels */
+.select-options input[type="checkbox"] {
+  margin: 0.2rem 0 0 0.5rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+/* Style the input field for selected values */
+#selectedServices {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  font-size: 1.4rem;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+/* Additional styles for displaying service prices */
+.servicesPrice {
+  display: none;
+  margin: 0.5rem 0 0 2.4rem;
+  font-size: 1.3rem;
+  color: blue;
+}
+.servicepriceinput {
+  margin: 0 0 1rem 0;
+  width: 20rem;
+}
+/* Additional styles can be added as needed */
+.project-container{
+  max-width: 100rem;
+  width: 100%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.project-container .input{
+  width: 26rem;
+  margin-bottom: 1rem;
+  height: 3rem;
+  border: none;
+  border: 0.2rem solid var(--body-color);
+}
+form .pymn-btn{
+  width: 50%;
+  display: block;
+  text-align: center;
+  align-items: center;
+  margin: 1.5rem auto 0; 
+  font-size: 1.4rem;
+  color: aliceblue;
+  background-color: #4CAF50;
+  color: white;
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+form span input:hover{
+  background: var(--primary-color-light);
+}
+/*------------------------------ css for payment page -----------------------------*/
+.project-container .payment-details .stage{
+  display: inline-flex;
+}
+.project-container .payment-details .stage .input{
+  width:15rem;
+}
+.project-container .payment-details .stage .details{
+  display: block;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+.details1{
+  display: block;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+.project-container .payment-details .heading{
+  display: inline-flex;
+  font-size: 1.5rem;
+  font-weight:900;
+}
+.project-container .payment-details .stage .pymnt1{
+  margin-left:3rem;
+}
+.heading1{
+  display: inline-flex;
+  font-weight:800;
+  margin-top: 0.2rem;
+  font-size: 1.4rem; 
+  color: rgba(20, 16, 16, 0.717);
+}
+.input-container {
+  position: relative;
+}
+.input-container .inputcon {
+  margin: 0;
+} 
+#totpymntdone,#OutstndBal{
+  width: 33rem;   
+}
+#dark{
+  font-size: 1.5rem;
+  font-weight:900;
+}
+#TotCBTPymtDone,#TotResPymtDone{
+  width: 33rem; 
+}
+#input1 .input{
+  padding-right: 6rem; 
+  width:33.2rem; 
 }

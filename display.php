@@ -33,7 +33,7 @@ $total = mysqli_num_rows($data);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="photos\images.png"/>
     <title>Project Status</title>
-    <link rel="stylesheet" href="css/display_table.css">
+    <link rel="stylesheet" href="css/display-table.css">
     <style></style>
 </head>
 <body>

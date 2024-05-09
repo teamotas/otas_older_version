@@ -17,7 +17,7 @@
       if ($data){
         if($data){
           echo"<script>alert('Record Deleted.');</script>";
-          ?><meta http-equiv="refresh" content="0  URL=project_data_tcs.php" /><?php
+          ?><meta http-equiv="refresh" content="0  URL=project-data-tcs.php" /><?php
         }
         else{
           echo"<script>alert('Failed');</script>";
@@ -48,7 +48,7 @@
         if (mysqli_stmt_execute($stmt)) {
           // Deletion successfull
           echo"<script>alert('Record Deleted.');</script>";
-          ?><meta http-equiv="refresh" content="0  URL=project_data.php" /><?php
+          ?><meta http-equiv="refresh" content="0  URL=project-data.php" /><?php
         } 
         else {
           // Deletion failed
@@ -58,7 +58,7 @@
       } 
       else {
         // Query preparation failed
-        ?><meta http-equiv="refresh" content="0  URL=project_data.php" /><?php
+        ?><meta http-equiv="refresh" content="0  URL=project-data.php" /><?php
       }
     }
   }
@@ -73,7 +73,7 @@
       $data=mysqli_query($conn,$queryy);
       if($data){
         echo"<script>alert('Record Deleted.');
-        location.replace('employee_data.php');
+        location.replace('employee-data.php');
         </script>";
       }
       else{

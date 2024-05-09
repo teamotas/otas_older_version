@@ -1,11 +1,26 @@
-table{
-    width:fit-content;
-    column-rule-width: 0rem;
-    border-collapse:collapse;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+@import url('all-common.css');
+.card1 {
+    height: calc(100vh - 4rem); 
+    width: calc(100% - 1.2rem);
+    overflow-y: auto;
+    background-color:#fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(1, 2, 0, 0.1);
+    padding: 4px;
+
+}
+table {
+    border-collapse: collapse;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 100%;
+    border-radius: 10px; /* Adjust the border radius as needed */
+    overflow: hidden; /* Ensure content doesn't overflow the rounded borders */
+}
+
+th, td {
+    padding: 12px;
     text-align: center;
-    width:100%; 
-    margin:0 1.5rem 0 0;
+    border: 1px solid #ddd;
 }
 .tr{
     background-color:#fff; 

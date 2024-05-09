@@ -12,7 +12,7 @@
     <body>
         <section class="home">      
             <div class="card-container">
-                <div class="card" onclick="window.location.href='project_data.php'">
+                <div class="card" onclick="window.location.href='project-data.php'">
                     <div class="icon2">
                         <img src="photos/clipboard.png" alt="" class="img2">
                     </div>
@@ -20,7 +20,7 @@
                     <p><?php echo $allProjects; ?></p>
                 </div>
 
-                <div class="card" onclick="window.location.href='ongoing_projects.php'">
+                <div class="card" onclick="window.location.href='ongoing-projects.php'">
                     <div class="icon2">
                         <img src="photos/contract.png" alt="" class="size img2">
                     </div>
@@ -28,7 +28,7 @@
                     <p><?php echo $ongoingProjects; ?></p>
                 </div>
 
-                <div class="card" onclick="window.location.href='pending_projects.php'">
+                <div class="card" onclick="window.location.href='pending-projects.php'">
                     <div class="icon2">
                         <img src="photos/clock.png" alt="" class="img2"></img>
                     </div>
@@ -36,7 +36,7 @@
                     <p><?php echo $pendingProjects; ?></p>
                 </div>
 
-                <div class="card" onclick="window.location.href='completed_projects.php'">
+                <div class="card" onclick="window.location.href='completed-projects.php'">
                     <div class="icon2">
                         <img src='photos/planner.png' class="img2"></img>
                     </div>
@@ -44,14 +44,14 @@
                     <p><?php echo $completedProjects; ?></p>
                 </div>
                 <?php if($adminType==='Admin'){?>
-                <div class="card" onclick="window.location.href='admin_data.php'">
+                <div class="card" onclick="window.location.href='admin-data.php'">
                     <div class="icon2">
                         <img src='photos/multiple-users-silhouette.png' class="img2"></img>
                     </div>  
                     <h2>Admin</h2>
                     <p><?php echo $activeAdmin; ?></p>
                 </div>
-                <div class="card" onclick="window.location.href='user_data.php'">
+                <div class="card" onclick="window.location.href='user-data.php'">
                     <div class="icon2">
                         <img src='photos/multiple-users-silhouette.png' class="img2"></img>
                     </div>  
@@ -63,8 +63,7 @@
         </section>
     </body>
 </html>
-
 <?php 
 }else{
-    header("Location: login_admin.php");}
+    header("Location: login-admin.php");}
 ?>

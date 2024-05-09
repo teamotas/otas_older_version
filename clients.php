@@ -1,15 +1,13 @@
 <?php 
-    include "connection.php";    include "sidebar.php";
+    include "connection.php"; 
+    include "sidebar.php";
     error_reporting(0);
     // error_reporting(E_ALL);
     // ini_set('display_errors', 1);
-
     session_start();
     if(($adminType==='Admin')||($userType==='User')){
     $sql="SELECT * from  client ";
     $query=mysqli_query($conn,$sql);
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +16,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clients</title>
         <link rel="stylesheet" href="css/table.css">
-      
     </head>
     <body>
         <section class="home">
@@ -76,21 +73,18 @@
                 <div class="no_data">
                     <div><h3> No Client Available </h3></div>&nbsp;&nbsp;
                     <div>
-                        <p>Want to create client <a href='create_client.php'>Click here</a></p>
+                        <p>Want to create client <a href='create-client.php'>Click here</a></p>
                     </div>
                 </div>
             <?php }?>
         </section>
     </body>
 </html>
-
-
-                                <!-- <td align="center">
-                                    <form action="update_client_data.php" method="post">
-                                        <input type="hidden" name="updateClient" value="true">
-                                        <input type="hidden" name="client_id" value="'.$client["ClientId"].'">
-                                        <input type="submit" class="updatebtn" value="Update">
-                                    </form>
-                                </td> -->
-                                
+<!-- <td align="center">
+    <form action="update_client_data.php" method="post">
+        <input type="hidden" name="updateClient" value="true">
+        <input type="hidden" name="client_id" value="'.$client["ClientId"].'">
+        <input type="submit" class="updatebtn" value="Update">
+    </form>
+</td> -->                             
 <?php }?>
